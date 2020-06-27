@@ -27,7 +27,7 @@ int main (int argc, char **argv) {
 		else if (strcmp("-f", argv[i]) == 0) {
 			filename = argv[++i];
 		}
-		else if (strcmp("-n", argv[i]) == 0) {
+		else if (strcmp("-v", argv[i]) == 0) {
 			encodeall = 0;
 		}
 	}
@@ -47,8 +47,8 @@ void show_help () {
 	printf("help message:\n");
 	printf("-p password 加密密码\n");
 	printf("-f filename 加密文件\n");
-	printf("-n not encode all data 视频文件只需要修改部分数据即不可播放\n");
-	printf("-a 加密全部数据,默认（不可与-n同时使用）\n");
+	printf("-v not encode all data 视频文件只需要修改部分数据即不可播放\n");
+	printf("-a 加密全部数据,默认（不可与-v同时使用）\n");
 };
 
 void encode (const char *filename, const char *password, int encodeall) {
